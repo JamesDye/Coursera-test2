@@ -3,34 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Responsive Layout</title>
+<title>Assignment2 answer</title>
 <style>
 /********** Base styles **********/
 * {
   box-sizing: border-box;
+  margin: 5px;
 }
 h1 {
   margin-bottom: 15px;
+  text-align:center;
 }
-p {
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 90%;
-  height: 150px;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: Helvetica;
-  color: white;
+h1.prod {
+   position:relative; 
+   top 0px;
+   left:70%;
+   width: 30%;
+   margin:0px;
+}
+
+#p1{
+    border: 1px solid black;
+    background-color: #ADFF2F;
+}
+
+#p2{
+    border: 1px solid black;
+    background-color: #F0FFF0;
+}
+
+#p3{
+    border: 1px solid black;
+    background-color: #DAA520;
+}
+
+.desc {
+  
+  clear;
+  padding: 5px;
+  
+}
+
+section{
+border: 5px solid black;
+background-color: #008000;
 }
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
 }
+
 /********** Large devices only **********/
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
-    border: 1px solid green;
+    margin: 5px;
   }
   .col-lg-1 {
     width: 8.33%;
@@ -42,13 +69,13 @@ p {
     width: 25%;
   }
   .col-lg-4 {
-    width: 33.33%;
+    width: 30.33%;
   }
   .col-lg-5 {
     width: 41.66%;
   }
   .col-lg-6 {
-    width: 50%;
+    width: 45%;
   }
   .col-lg-7 {
     width: 58.33%;
@@ -69,11 +96,16 @@ p {
     width: 100%;
   }
 }
+
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-    border: 1px solid green;
+    margin: 5px;
+  }
+  .col-md-last{
+  clear:left;
+  width: 92%;
   }
   .col-md-1 {
     width: 8.33%;
@@ -91,7 +123,7 @@ p {
     width: 41.66%;
   }
   .col-md-6 {
-    width: 50%;
+    width: 45%;
   }
   .col-md-7 {
     width: 58.33%;
@@ -112,20 +144,17 @@ p {
     width: 100%;
   }
 }
+
 </style>
 </head>
 <body>
-<h1>Responsive Layout</h1>
+<h1>Our Menu</h1>
 
 <div class="row">
-  <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 2</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 5</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 7</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
+  <section class="col-lg-4 col-md-6"><h1 id='p1' class='prod'>Chicken</h1><p class='desc'>Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts.Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts.Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts</p></section>
+  <section class="col-lg-4 col-md-6"><h1 id='p2' class='prod'>Beef</h1><p class='desc'>Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts.Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts.Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts</p></section>
+  <section class="col-lg-4 col-md-12"><h1 id='p3' class='prod'>sushi</h1><p class='desc'>Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts.Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts.Dummy text is the best of texts. Dummy Text is the best of Texts. Dummy Text is the bestest of bestest texts</p></section>
+
 </div>
 
 </body>
